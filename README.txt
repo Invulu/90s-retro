@@ -1,6 +1,7 @@
 Retro v1.0
-http://www.retrotheme.com
 http://organicthemes.com
+
+A WordPress theme designed in the style of an old Geocities site, because we thought it would be funny.
 
 Image Credits
 

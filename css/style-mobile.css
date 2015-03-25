@@ -190,10 +190,13 @@
 		margin: 0px;
 		}
 	#navigation {
+		background: #cccccc;
 		position: relative;
 		top: auto;
 		margin: 0px;
 		padding: 0px;
+		border: 3px solid #666666;
+		box-shadow: inset 3px 3px 0px #ffffff;
 		}
 	.mobile-menu {
 		margin: 0px;
@@ -212,7 +215,6 @@
 		}
 	.menu-toggle {
 		color: #666666;
-		color: rgba(0, 0, 0, .4);
 		font-size: 24px;
 		text-align: left;
 		line-height: 1.2;
@@ -220,7 +222,7 @@
 		padding: 12px 18px;
 		}
 	.menu-toggle:hover {
-		color: rgba(0, 0, 0, .8);
+		color: #000000;
 		}
 	.mobile-menu ul.sub-menu,
 	.mobile-menu ul.children {
@@ -252,17 +254,19 @@
 		}
 	.mobile-menu a {
 		display: block;
-		color: rgba(0, 0, 0, .4) !important;
+		color: #666666 !important;
 		font-size: 1.2em;
 		text-decoration: none;
 		text-transform: uppercase;
 		padding: 6px 0px;
-		border-top: 1px solid rgba(0, 0, 0, .12);
+		border-top: 1px solid #ffffff;
+		border-bottom: 1px solid #999999;
 		}
 	.mobile-menu a:hover {
-		background: rgba(0, 0, 0, .04);
-		color: rgba(0, 0, 0, .8) !important;
+		background: #999999;
+		color: #000000 !important;
 		text-decoration: none;
+		box-shadow: inset 3px 3px 0px #666666;
 		}
 	.content {
 		padding: 12px 4%;

@@ -1,0 +1,372 @@
+/************************************************
+*	Desktop Grid								*
+************************************************/
+
+.row { 
+	width: 100%; 
+	margin: 0 auto; 
+	}
+.row .row { 
+	min-width: 0; 
+	}
+.column, .columns { 
+	float: left; 
+	min-height: 1px; 
+	position: relative; 
+	}
+[class*="column"] + [class*="column"]:last-child { 
+	float: right; 
+	}
+
+.half, .third, .one-third, .fourth,
+.one-fourth, .two-thirds, .three-fourths {
+	float: left;
+	}
+.half.last, .third.last, .one-third.last, .fourth.last,
+.one-fourth.last, .two-thirds.last, .three-fourths.last {
+	float: right;
+	}
+
+.full	 		{ width: 100%; }
+.half 			{ width: 49.9%; }
+.third,
+.one-third 		{ width: 33.3%; }
+.fourth,
+.one-fourth		{ width: 25%; }
+.two-thirds 	{ width: 66.6%; }
+.three-fourths	{ width: 75%; }
+
+.row .one 		{ width: 6.25%; }
+.row .two 		{ width: 12.5%; }
+.row .three 	{ width: 18.75%; }
+.row .four 		{ width: 25%; }
+.row .five 		{ width: 31.25%; }
+.row .six 		{ width: 37.5%; }
+.row .seven 	{ width: 43.75%; }
+.row .eight 	{ width: 50%; }
+.row .nine 		{ width: 56.25%; }
+.row .ten 		{ width: 62.5%; }
+.row .eleven 	{ width: 68.75%; }
+.row .twelve 	{ width: 75%; }
+.row .thirteen 	{ width: 81.25%; }
+.row .fourteen 	{ width: 87.5%; }
+.row .fifteen 	{ width: 93.75%; }
+.row .sixteen 	{ width: 100%; }
+
+.row .centered { float: none; margin: 0 auto; }
+
+/************************************************
+*	Tablet Styles								*
+************************************************/
+	
+@media handheld, only screen and (max-width: 1023px) {
+	
+	/* Typography */
+	
+	body {  
+		font-size: 0.9rem; 
+		line-height: 1.9; 
+		}
+	blockquote {
+		font-size: 1.4rem;
+		}
+	
+	/* Theme */
+	
+	#custom-header {
+		min-height: 240px;
+		background-position: center center;
+		background-attachment: scroll;
+		background-size: cover;
+		}
+	.headline.img-headline {
+		width: 88%;
+		font-size: 2.8rem;
+		letter-spacing: -1px;
+		padding: 36px 6%;
+		}
+	.menu a {
+		font-size: .9em;
+		}
+	.article {
+		padding: 36px 6%;
+		}
+	.postarea.full .article {
+		padding: 48px 8%;
+		}
+	.postarea.middle .article {
+		padding: 18px 6%;
+		}
+	.post-holder, 
+	.page-holder, 
+	.blog-holder, 
+	.archive-holder {
+		margin-bottom: 36px;
+		}
+	#comments {
+		padding: 36px 6%;
+		}
+	.postarea.full #comments {
+		padding: 48px 8%;
+		}
+	.postarea.middle #comments {
+		padding: 18px 6%;
+		}
+	.footer-information .content {
+		text-align: center;
+		}
+	.footer-information .align-left {
+		float: none;
+		display: block;
+		}
+	.footer-information .align-right {
+		float: none;
+		display: block;
+		text-align: center;
+		margin-top: 18px;
+		}
+	
+	}
+	
+/************************************************
+*	Phone Styles								*
+************************************************/
+	
+@media handheld, only screen and (max-width: 767px) {
+
+	/* Typography */
+	
+	h1 { 
+		font-size: 1.8rem; 
+		line-height: 1.4; 
+		}
+	h2 { 
+		font-size: 1.6rem; 
+		line-height: 1.4; 
+		}
+	h3 {  
+		font-size: 1.4rem; 
+		line-height: 1.4; 
+		}
+	h4 {  
+		font-size: 1.2rem; 
+		line-height: 1.4; 
+		}
+	h5 { 
+		font-size: 1.1rem; 
+		line-height: 1.4; 
+		}
+	h6 { 
+		font-size: 1.0rem; 
+		line-height: 1.4; 
+		}
+	.headline {
+		font-size: 2rem;
+		padding-bottom: 6px;
+		}
+	.title {
+		font-size: 1.4rem;
+		}
+	body, p {  
+		font-size: 0.9rem; 
+		line-height: 1.7; 
+		}
+	blockquote {
+		padding: 12px 0px;
+		border-left: none;
+		}
+	blockquote p {
+		font-size: 1rem;
+		line-height: 1.6;
+		}
+	.headline.img-headline {
+		font-size: 2rem;
+		}	
+
+	/* Theme */
+	
+	#custom-header {
+		background-position: center center !important;
+		margin: 0px;
+		}
+	#navigation {
+		position: relative;
+		top: auto;
+		margin: 0px;
+		padding: 0px;
+		}
+	.mobile-menu {
+		margin: 0px;
+		padding: 0px;
+		}
+	.menu-toggle,
+	.main-small-navigation ul.mobile-menu.toggled-on {
+		display: block;
+		}
+	.navigation-main ul.menu,
+	.sf-sub-indicator {
+		display: none;
+		}
+	.menu {
+		display: block;
+		}
+	.menu-toggle {
+		color: #666666;
+		color: rgba(0, 0, 0, .4);
+		font-size: 24px;
+		text-align: left;
+		line-height: 1.2;
+		margin: 0;
+		padding: 12px 18px;
+		}
+	.menu-toggle:hover {
+		color: rgba(0, 0, 0, .8);
+		}
+	.mobile-menu ul.sub-menu,
+	.mobile-menu ul.children {
+		display: block !important;
+		visibility: visible !important;
+		left: auto;
+		margin: 0;
+		padding: 0;
+		}
+	.mobile-menu ul,
+	.mobile-menu li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}
+	.mobile-menu li {
+		display: block;
+		text-align: center;
+		line-height: 30px;
+		}
+	.mobile-menu li li a:before {
+		content: '- ';
+		}
+	.mobile-menu li li li a:before {
+		content: '-- ';
+		}
+	.mobile-menu li li li li a:before {
+		content: '--- ';
+		}
+	.mobile-menu a {
+		display: block;
+		color: rgba(0, 0, 0, .4) !important;
+		font-size: 1.2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 6px 0px;
+		border-top: 1px solid rgba(0, 0, 0, .12);
+		}
+	.mobile-menu a:hover {
+		background: rgba(0, 0, 0, .04);
+		color: rgba(0, 0, 0, .8) !important;
+		text-decoration: none;
+		}
+	.content {
+		padding: 12px 4%;
+		}
+	.postarea, 
+	.postarea.middle,
+	.postarea.right, 
+	.postarea.full {
+		padding: 12px 0px;
+		}
+	.article,
+	.postarea.full .article,
+	.postarea.middle .article {
+		padding: 24px 6%;
+		}
+	.post-holder, 
+	.page-holder, 
+	.blog-holder, 
+	.archive-holder {
+		margin-bottom: 24px;
+		}
+	i.format-icon {
+		display: none;
+		}
+	#comments,
+	.postarea.full #comments,
+	.postarea.middle #comments {
+		padding: 24px 6%;
+		}
+	.pagination {
+		margin-bottom: 12px;
+		}
+	.archive-column {
+		width: 100%;
+		padding-right: 0;
+		}
+	.sidebar {
+		padding: 24px;
+		}
+	.sidebar.left {
+		display: none;
+		}
+	.overlap .sidebar {
+		padding-top: 24px;
+		}
+	.sidebar .widget:last-child {
+		margin-bottom: 12px;
+		}
+	.container form input[type='url'],
+	.container form input[type='tel'],
+	.container form input[type='email'],
+	.container form input[type='text'],
+	.container form input[type='password'],
+	.container form input[type='number'],
+	.container form textarea {
+		width: 94%;
+		padding: 8px 2%;
+		}
+		
+	/* Grid */
+	
+	body { 
+		-webkit-text-size-adjust: none; 
+		-ms-text-size-adjust: none; 
+		width: 100%; 
+		min-width: 0; 
+		margin-left: 0; 
+		margin-right: 0; 
+		padding-left: 0; 
+		padding-right: 0; 
+		}
+	.row { 
+		width: 100%; 
+		min-width: 0; 
+		margin-left: 0; 
+		margin-right: 0;
+		overflow: visible !important;
+		}
+	.half, .third, .one-third, .fourth,
+	.one-fourth, .two-thirds, .three-fourths {
+		float: none;
+		width: 100%;
+		}
+	.row .row .column, .row .row .columns { 
+		padding: 0; 
+		}
+	.column, .columns { 
+		width: auto !important; 
+		float: none; 
+		margin-left: 0; 
+		margin-right: 0; 
+		}
+	.column:last-child, .columns:last-child { 
+		margin-right: 0; 
+		float: none; 
+		}
+	[class*="column"] + [class*="column"]:last-child { 
+		float: none; 
+		}
+	[class*="column"]:before, [class*="column"]:after { 
+		content:''; 
+		display:table; 
+		}
+	[class*="column"]:after { 
+		clear: both; 
+		}
+	}

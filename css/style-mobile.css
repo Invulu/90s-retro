@@ -285,10 +285,13 @@
 	.page-holder, 
 	.blog-holder, 
 	.archive-holder {
-		margin-bottom: 24px;
+		margin-bottom: 12px;
 		}
-	i.format-icon {
-		display: none;
+	.post-banner, 
+	.feature-img.post-banner,
+	.page-banner,
+	.feature-img.page-banner {
+		margin-bottom: 12px;
 		}
 	#comments,
 	.postarea.full #comments,
@@ -307,9 +310,6 @@
 		}
 	.sidebar.left {
 		display: none;
-		}
-	.overlap .sidebar {
-		padding-top: 24px;
 		}
 	.sidebar .widget:last-child {
 		margin-bottom: 12px;

@@ -30,4 +30,5 @@ CHANGELOG v1.0.1:
 - Updated screenshot
 - Removed unnecessary functions
 - Removed old IE conditionals
+- Changed theme name
 - Style tweaks

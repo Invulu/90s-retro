@@ -138,19 +138,12 @@ function retro_add_editor_styles() {
 /*	Content Width
 /*----------------------------------------------------------------------------------------------------*/
 
-if ( ! isset( $content_width ) )
-	$content_width = 640;
+if ( ! isset( $content_width ) ) $content_width = 840;
 
-/**
- * Adjust content_width value based on the presence of widgets
- */
 function retro_content_width() {
-	if ( ! is_active_sidebar( 'post-sidebar' ) || is_active_sidebar( 'page-sidebar' ) || is_active_sidebar( 'blog-sidebar' ) ) {
-		global $content_width;
-		$content_width = 960;
-	}
+	$GLOBALS['content_width'] = apply_filters( 'retro_content_width', 840 );
 }
-add_action( 'template_redirect', 'retro_content_width' );
+add_action( 'after_setup_theme', 'retro_content_width', 0 );
 	
 /*-----------------------------------------------------------------------------------------------------//	
 	Comments Function		       	     	 
@@ -216,19 +209,6 @@ function retro_comment( $comment, $args, $depth ) {
 endif; // ends check for retro_comment()
 
 /*-----------------------------------------------------------------------------------------------------//	
-	Comments Disabled On Pages By Default		       	     	 
--------------------------------------------------------------------------------------------------------*/
-
-function retro_default_comments_off( $data ) {
-    if( $data['post_type'] == 'page' && $data['post_status'] == 'auto-draft' ) {
-        $data['comment_status'] = 0;
-    } 
-
-    return $data;
-}
-add_filter( 'wp_insert_post_data', 'retro_default_comments_off' );
-
-/*-----------------------------------------------------------------------------------------------------//	
 	Custom Excerpt Length		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
@@ -241,15 +221,6 @@ function retro_excerpt_more( $more ) {
 	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'retro') .'</a>';
 }
 add_filter('excerpt_more', 'retro_excerpt_more');
-
-/*-----------------------------------------------------------------------------------------------------//	
-	Add Excerpt To Pages		       	     	 
--------------------------------------------------------------------------------------------------------*/
-
-add_action( 'init', 'retro_add_excerpts_to_pages' );
-function retro_add_excerpts_to_pages() {
-     add_post_type_support( 'page', 'excerpt' );
-}
 
 /*-----------------------------------------------------------------------------------------------------//
 /*	Pagination Function
@@ -295,27 +266,6 @@ function retro_wp_link_pages_args_prevnext_add($args) {
 }
 
 add_filter('wp_link_pages_args', 'retro_wp_link_pages_args_prevnext_add');
-
-/*-----------------------------------------------------------------------------------------------------//	
-	Add Home Link To Custom Menu		       	     	 
--------------------------------------------------------------------------------------------------------*/
-
-function home_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
-}
-add_filter('wp_page_menu_args', 'home_page_menu_args');
-
-/*-----------------------------------------------------------------------------------------------------//	
-	Strip inline width and height attributes from WP generated images		       	     	 
--------------------------------------------------------------------------------------------------------*/
- 
-function remove_thumbnail_dimensions( $html ) { 
-	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); 
-	return $html; 
-	}
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); 
-add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
 
 /*-----------------------------------------------------------------------------------------------------//
 	Body Class

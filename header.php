@@ -9,11 +9,6 @@
 */
 ?><!DOCTYPE html>
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
@@ -65,18 +60,15 @@
 		
 			<span class="menu-toggle"><i class="fa fa-bars"></i></span>
 		
-			<?php if ( has_nav_menu( 'main-menu' ) ) {
-				wp_nav_menu( array(
-					'theme_location' => 'main-menu',
-					'title_li' => '',
-					'depth' => 4,
-					'container_class' => '',
-					'menu_class'      => 'menu'
-					)
-				);
-			} else { ?>
-				<div class="menu-container"><ul class="menu"><?php wp_list_pages('title_li=&depth=4'); ?></ul></div>
-			<?php } ?>
+			<?php wp_nav_menu( array(
+				'theme_location' 	=> 'main-menu',
+				'title_li' 			=> '',
+				'depth' 			=> 4,
+				'fallback_cb'     	=> 'wp_page_menu',
+				'container_class' 	=> '',
+				'menu_class'      	=> 'menu'
+				)
+			); ?>
 		
 		<!-- END #navigation -->
 		</nav>

@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.0
+	Version: 1.0.1
 	Text Domain: retro
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -147,10 +147,12 @@ code {
 	}
 pre {
 	display: block;
+	white-space: pre-line;
 	}
 pre code {
 	padding: 0px;
 	border: none;
+	box-shadow: none;
 	}
 img {
 	-ms-interpolation-mode: bicubic;
@@ -440,12 +442,14 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	margin: 0px;
 	padding: 0px;
 	}
-.menu ul ul, ul.menu ul {
+ul.menu ul,
+div.menu ul ul {
 	position: absolute;
 	top: -9999px;
 	width: 240px; /* left offset of submenus need to match (see below) */
-	}
-.menu ul li ul li, ul.menu ul li {
+	} 
+ul.menu ul li,
+div.menu ul ul li {
 	width: 100%;
 	margin: 0px;
 	}
@@ -472,20 +476,24 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	z-index: 99;
 	}
 ul.menu li:hover li ul,
-ul.menu li.sfHover li ul {
+ul.menu li.sfHover li ul,
+div.menu ul li:hover li ul {
 	top: -9999px;
 	}
 ul.menu li li:hover ul,
-ul.menu li li.sfHover ul {
+ul.menu li li.sfHover ul,
+div.menu ul li li.sfHover ul {
 	left: 240px; /* match ul width */
 	top: 0;
 	}
 ul.menu li li:hover li ul,
-ul.menu li li.sfHover li ul {
+ul.menu li li.sfHover li ul,
+div.menu ul li li:hover li ul {
 	top: -9999px;
 	}
 ul.menu li li li:hover ul,
-ul.menu li li li.sfHover ul {
+ul.menu li li li.sfHover ul,
+div.menu ul li li li:hover ul {
 	left: 240px; /* match ul width */
 	top: 0;
 	}

@@ -1,4 +1,4 @@
-Retro v1.0
+Retro v1.0.1
 http://organicthemes.com
 
 A WordPress theme designed in the style of an old Geocities site, because we thought it would be funny.
@@ -22,3 +22,12 @@ INSTALL:
 1. Upload the theme by navigating to Appearance > Themes > Install Themes within the WordPress admin. Select the theme zip file to upload.
 2. Activate the theme after uploading.
 3. Configure and save the theme options within Appearance > Customize.
+
+CHANGELOG v1.0.1:
+- Updated FontAwesome
+- Custom menu updates
+- Updated content width function
+- Updated screenshot
+- Removed unnecessary functions
+- Removed old IE conditionals
+- Style tweaks

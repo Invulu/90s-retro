@@ -2,8 +2,8 @@
 /**
 * This page template is used to display a 404 error message.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 get_header(); ?>
@@ -28,8 +28,8 @@ get_header(); ?>
 				<!-- BEGIN .article -->
 				<div class="article">
 			
-					<h1 class="headline"><?php _e("Not Found, Error 404", 'retro'); ?></h1>
-					<p><?php _e("The page you are looking for no longer exists.", 'retro'); ?></p>
+					<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'nineties-retro'); ?></h1>
+					<p><?php esc_html_e("The page you are looking for no longer exists.", 'nineties-retro'); ?></p>
 					
 				<!-- END .article -->
 				</div>
@@ -65,8 +65,8 @@ get_header(); ?>
 					<!-- BEGIN .article -->
 					<div class="article">
 				
-						<h1 class="headline"><?php _e("Not Found, Error 404", 'retro'); ?></h1>
-						<p><?php _e("The page you are looking for no longer exists.", 'retro'); ?></p>
+						<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'nineties-retro'); ?></h1>
+						<p><?php esc_html_e("The page you are looking for no longer exists.", 'nineties-retro'); ?></p>
 						
 					<!-- END .article -->
 					</div>

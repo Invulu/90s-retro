@@ -2,8 +2,8 @@
 /**
 * This template is used to display author information, when clicking on an authors name.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 get_header(); ?>

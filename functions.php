@@ -9,7 +9,7 @@ if ( ! function_exists( 'retro_setup' ) ) :
 function retro_setup() {
 
 	// Make theme available for translation
-	load_theme_textdomain( 'retro', get_template_directory() . '/languages' );
+	load_theme_textdomain( '90s-retro', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -26,8 +26,8 @@ function retro_setup() {
 
 	// Create Menus
 	register_nav_menus( array(
-		'main-menu' => __( 'Main Menu', 'retro' ),
-		'social-menu' => __( 'Social Menu', 'retro' ),
+		'main-menu' => esc_html__( 'Main Menu', '90s-retro' ),
+		'social-menu' => esc_html__( 'Social Menu', '90s-retro' ),
 	));
 	
 	// Custom Header
@@ -101,7 +101,7 @@ add_action('wp_enqueue_scripts', 'retro_enqueue_scripts');
 
 function retro_widgets_init() {
 	register_sidebar(array(
-		'name'=> __( "Default Sidebar", 'retro' ),
+		'name'=> esc_html__( "Default Sidebar", '90s-retro' ),
 		'id' => 'default-sidebar',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
@@ -109,7 +109,7 @@ function retro_widgets_init() {
 		'after_title'=>'</h6>'
 	));
 	register_sidebar(array(
-		'name'=> __( "Blog Sidebar", 'retro' ),
+		'name'=> esc_html__( "Blog Sidebar", '90s-retro' ),
 		'id' => 'blog-sidebar',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
@@ -157,7 +157,7 @@ function retro_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'retro' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'retro' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php esc_html_e( 'Pingback:', '90s-retro' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', '90s-retro' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 		break;
 		default :
@@ -175,13 +175,13 @@ function retro_comment( $comment, $args, $depth ) {
 						echo get_avatar( $comment, $avatar_size );
 
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s <br/> %2$s <br/>', 'retro' ),
+						printf( esc_html__( '%1$s <br/> %2$s <br/>', '90s-retro' ),
 							sprintf( '<span class="fn">%s</span>', wp_kses_post( get_comment_author_link() ) ),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s', 'retro' ), get_comment_date(), get_comment_time() )
+								sprintf( esc_html__( '%1$s', '90s-retro' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>
@@ -190,14 +190,14 @@ function retro_comment( $comment, $args, $depth ) {
 
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'retro' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', '90s-retro' ); ?></em>
 					<br />
 				<?php endif; ?>
 				<?php comment_text(); ?>
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'retro' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', '90s-retro' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</div><!-- .reply -->
-				<?php edit_comment_link( __( 'Edit', 'retro' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_comment_link( esc_html__( 'Edit', '90s-retro' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 
 		</article><!-- #comment-## -->
@@ -218,7 +218,7 @@ function retro_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'retro_excerpt_length', 999 );
 
 function retro_excerpt_more( $more ) {
-	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'retro') .'</a>';
+	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. esc_html__('Read More', '90s-retro') .'</a>';
 }
 add_filter('excerpt_more', 'retro_excerpt_more');
 
@@ -233,8 +233,8 @@ function retro_get_pagination_links() {
 		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var('paged') ),
-		'prev_text' => __('&laquo;', 'retro'),
-		'next_text' => __('&raquo;', 'retro'),
+		'prev_text' => esc_html__('&laquo;', '90s-retro'),
+		'next_text' => esc_html__('&raquo;', '90s-retro'),
 		'total' => $wp_query->max_num_pages
 	) );
 }

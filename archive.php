@@ -3,8 +3,8 @@
 * This template is used to display archive posts, e.g. tag post indexes.
 * This template is also the fallback template to 'category.php'.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 get_header(); ?>

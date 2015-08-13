@@ -3,8 +3,8 @@
 * Jetpack Compatibility File
 * See: http://jetpack.me/
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 */
 
 /**

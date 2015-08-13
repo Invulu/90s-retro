@@ -3,8 +3,8 @@
 * The default sidebar template for our theme.
 * This template is used to display the sidebar on pages.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 ?>

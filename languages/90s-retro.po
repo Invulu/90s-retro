@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Retro\n"
-"POT-Creation-Date: 2015-03-01 07:44-1000\n"
-"PO-Revision-Date: 2015-03-01 07:44-1000\n"
+"Project-Id-Version: 90s Retro\n"
+"POT-Creation-Date: 2015-08-13 11:59-0500\n"
+"PO-Revision-Date: 2015-08-13 11:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -101,19 +101,19 @@ msgid "F j, Y"
 msgstr ""
 
 #: content/loop-archive.php:24 content/loop-blog.php:24
-#: content/loop-post.php:22
+#: content/loop-post.php:20
 msgid "by"
 msgstr ""
 
-#: content/loop-archive.php:30 content/loop-post.php:45
+#: content/loop-archive.php:30 content/loop-post.php:43
 msgid ", "
 msgstr ""
 
-#: content/loop-archive.php:35 content/loop-post.php:45
+#: content/loop-archive.php:35 content/loop-post.php:43
 msgid "Category:"
 msgstr ""
 
-#: content/loop-archive.php:35 content/loop-post.php:45
+#: content/loop-archive.php:35 content/loop-post.php:43
 msgid "Tags:"
 msgstr ""
 
@@ -121,11 +121,11 @@ msgstr ""
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: content/loop-blog.php:30 content/loop-page.php:15 functions.php:249
+#: content/loop-blog.php:30 content/loop-page.php:13 functions.php:221
 msgid "Read More"
 msgstr ""
 
-#: content/loop-blog.php:51 content/loop-post.php:76
+#: content/loop-blog.php:51 content/loop-post.php:74
 msgid "No Posts Found"
 msgstr ""
 
@@ -135,71 +135,67 @@ msgid ""
 "section, and configure your theme options."
 msgstr ""
 
-#: content/loop-page.php:18 content/loop-post.php:31
+#: content/loop-page.php:16 content/loop-post.php:29
 msgid "Pages:"
 msgstr ""
 
-#: content/loop-page.php:23 content/loop-post.php:36
+#: content/loop-page.php:21 content/loop-post.php:34
 msgid "Next"
 msgstr ""
 
-#: content/loop-page.php:24 content/loop-post.php:37
+#: content/loop-page.php:22 content/loop-post.php:35
 msgid "Previous"
 msgstr ""
 
-#: content/loop-page.php:29
+#: content/loop-page.php:27
 msgid "(Edit)"
 msgstr ""
 
-#: content/loop-page.php:50
+#: content/loop-page.php:48
 msgid "Page Not Found"
 msgstr ""
 
-#: content/loop-page.php:51
+#: content/loop-page.php:49
 msgid "We're sorry, but the page could not be found."
 msgstr ""
 
-#: content/loop-post.php:77
+#: content/loop-post.php:75
 msgid "We're sorry, but the post was not found."
 msgstr ""
 
-#: footer.php:54
+#: footer.php:47
 msgid "Copyright"
 msgstr ""
 
-#: footer.php:54
+#: footer.php:47
 msgid "Y"
 msgstr ""
 
-#: footer.php:54
+#: footer.php:47
 msgid "All Rights Reserved"
 msgstr ""
 
-#: footer.php:56
-msgid "Retro"
+#: footer.php:49
+msgid "90s Retro"
 msgstr ""
 
-#: footer.php:56
+#: footer.php:49
 msgid "from"
 msgstr ""
 
-#: footer.php:56
+#: footer.php:49
 msgid "Organic Themes"
 msgstr ""
 
-#: footer.php:56
+#: footer.php:49
 msgid "RSS Feed"
 msgstr ""
 
 #: functions.php:29
-msgid "Fixed Menu"
-msgstr ""
-
-#: functions.php:30
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:31
+#: functions.php:30
 msgid "Social Menu"
 msgstr ""
 
@@ -211,41 +207,37 @@ msgstr ""
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:120
-msgid "Footer Widgets"
-msgstr ""
-
-#: functions.php:175
+#: functions.php:160
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:175 functions.php:215
+#: functions.php:160 functions.php:200
 msgid "Edit"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:178
 #, php-format
 msgid "%1$s <br/> %2$s <br/>"
 msgstr ""
 
-#: functions.php:199
+#: functions.php:184
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: functions.php:208
+#: functions.php:193
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:213
+#: functions.php:198
 msgid "Reply"
 msgstr ""
 
-#: functions.php:273
+#: functions.php:236
 msgid "&laquo;"
 msgstr ""
 
-#: functions.php:274
+#: functions.php:237
 msgid "&raquo;"
 msgstr ""
 
@@ -346,52 +338,43 @@ msgid "Title & Logo Alignment"
 msgstr ""
 
 #: includes/customizer.php:194
-msgid "Layout"
+msgid "Background Audio"
 msgstr ""
 
 #: includes/customizer.php:204
-msgid "Show Post Author Link?"
+msgid "Upload Audio"
+msgstr ""
+
+#: includes/customizer.php:205
+msgid "Preferably an MP3 audio file."
 msgstr ""
 
 #: includes/customizer.php:217
+msgid "Stop The DAMN Music!!!"
+msgstr ""
+
+#: includes/customizer.php:229
+msgid "Misc Options"
+msgstr ""
+
+#: includes/customizer.php:239
+msgid "Show Animated Footer Gifs?"
+msgstr ""
+
+#: includes/customizer.php:252
+msgid "Show Fake Visitor Counter?"
+msgstr ""
+
+#: includes/customizer.php:265
 msgid "Show Blog Author Link?"
 msgstr ""
 
-#: includes/customizer.php:230
+#: includes/customizer.php:278
 msgid "Show Blog Date & Comment Link?"
 msgstr ""
 
-#: includes/customizer.php:243
+#: includes/customizer.php:291
 msgid "Show Post Featured Images?"
-msgstr ""
-
-#: includes/customizer.php:256
-msgid "Enable Full Width Background Image?"
-msgstr ""
-
-#: includes/typefaces.php:24
-msgctxt "Raleway font: on or off"
-msgid "on"
-msgstr ""
-
-#: includes/typefaces.php:25
-msgctxt "Roboto font: on or off"
-msgid "on"
-msgstr ""
-
-#: includes/typefaces.php:26
-msgctxt "Open Sans font: on or off"
-msgid "on"
-msgstr ""
-
-#: includes/typefaces.php:27
-msgctxt "Montserrat font: on or off"
-msgid "on"
-msgstr ""
-
-#: includes/typefaces.php:28
-msgctxt "Droid Serif font: on or off"
-msgid "on"
 msgstr ""
 
 #: searchform.php:12

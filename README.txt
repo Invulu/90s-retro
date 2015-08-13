@@ -1,4 +1,4 @@
-Retro v1.0.1
+90s Retro v1.1
 http://organicthemes.com
 
 A WordPress theme designed in the style of an old Geocities site, because we thought it would be funny.
@@ -8,6 +8,10 @@ Image Credits
 - logo.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
+
+Audio Credits
+
+- come_and_find_me.mp3: Created by Eric Skiff, http://ericskiff.com/music/. Licensed under the Creative Commons license.
 
 Font Awesome
 
@@ -24,7 +28,7 @@ INSTALL:
 3. Configure and save the theme options within Appearance > Customize.
 
 CHANGELOG v1.0.1:
-- Updated FontAwesome
+- Updated Font Awesome
 - Custom menu updates
 - Updated content width function
 - Updated screenshot
@@ -32,3 +36,10 @@ CHANGELOG v1.0.1:
 - Removed old IE conditionals
 - Changed theme name
 - Style tweaks
+
+CHANGELOG v1.1:
+- Changed Theme Name
+- Updated FontAwesome
+- Added escaping to i18n translations
+- Updated language files
+- Changed audio file

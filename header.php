@@ -3,8 +3,8 @@
 * The Header for our theme.
 * Displays all of the <head> section and everything up till <div id="wrap">
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 ?><!DOCTYPE html>
@@ -81,6 +81,6 @@
 
 <?php if (get_theme_mod('stop_the_music', '') == '') { ?>
 
-<audio src="<?php echo esc_url( get_theme_mod( 'retro_upload_audio', get_template_directory_uri() . '/audio/overworld.mp3' ) ); ?>" preload="auto" autoplay="autoplay"></audio>
+<audio src="<?php echo esc_url( get_theme_mod( 'retro_upload_audio', get_template_directory_uri() . '/audio/come_and_find_me.mp3' ) ); ?>" preload="auto" autoplay="autoplay"></audio>
 
 <?php } ?>

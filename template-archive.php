@@ -4,8 +4,8 @@ Template Name: Archives
 *
 * This template is used to display site archives of posts, pages and categories.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 get_header(); ?>
@@ -43,20 +43,20 @@ get_header(); ?>
 							<h1 class="headline"><?php the_title(); ?></h1>
 							
 							<div class="archive-column">
-								<h6><?php _e("By Page:", 'retro'); ?></h6>
+								<h6><?php esc_html_e("By Page:", '90s-retro'); ?></h6>
 								<ul><?php wp_list_pages('title_li='); ?></ul>
 							</div>
 							
 							<div class="archive-column">
-								<h6><?php _e("By Post:", 'retro'); ?></h6>
+								<h6><?php esc_html_e("By Post:", '90s-retro'); ?></h6>
 								<ul><?php wp_get_archives('type=postbypost&limit=100'); ?></ul>
 							</div>
 							
 							<div class="archive-column last">
-								<h6><?php _e("By Month:", 'retro'); ?></h6>
+								<h6><?php esc_html_e("By Month:", '90s-retro'); ?></h6>
 								<ul><?php wp_get_archives('type=monthly'); ?></ul>
 								<br />
-								<h6><?php _e("By Category:", 'retro'); ?></h6>
+								<h6><?php esc_html_e("By Category:", '90s-retro'); ?></h6>
 								<ul><?php wp_list_categories('sort_column=name&title_li='); ?></ul>
 							</div>
 						

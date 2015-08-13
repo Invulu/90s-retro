@@ -4,8 +4,8 @@ Template Name: Full Width
 *
 * This template is used to display full-width pages.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 get_header(); ?>

@@ -1,14 +1,14 @@
 /******************************************************************************************************************* 
 
-	Theme Name: 90's Retro
+	Theme Name: 90s Retro
 	Theme URI: http://www.organicthemes.com
-	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90's!? Probably not!
+	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably not!
 	Author: Organic Themes
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.0.1
-	Text Domain: retro
+	Version: 1.1
+	Text Domain: 90s-retro
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
 	
@@ -414,6 +414,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	font-family: Courier, serif;
 	font-size: 1em;
 	font-weight: 600;
+	text-align: center;
 	margin-top: 12px;
 	padding: 0px;
 	z-index: 99;
@@ -428,6 +429,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	
 /*** ESSENTIAL STYLES ***/
 .menu, .menu * {
+	display: table;
 	margin:	0 auto 0;
 	padding: 0;
 	list-style:	none;

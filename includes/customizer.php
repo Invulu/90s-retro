@@ -4,8 +4,8 @@
 *
 * Very helpful: http://ottopress.com/2012/theme-customizer-part-deux-getting-rid-of-options-pages/
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 */
 function retro_theme_customizer( $wp_customize ) {
 
@@ -18,7 +18,7 @@ function retro_theme_customizer( $wp_customize ) {
 				array(
 					'name'              => '_customize-dropdown-categories-' . $this->id,
 					'echo'              => 0,
-					'show_option_none'  => __( '&mdash; Select &mdash;', 'retro' ),
+					'show_option_none'  => esc_html__( '&mdash; Select &mdash;', '90s-retro' ),
 					'option_none_value' => '0',
 					'selected'          => $this->value(),
 				)
@@ -56,16 +56,16 @@ function retro_theme_customizer( $wp_customize ) {
 	
 	function retro_sanitize_transition_interval( $input ) {
 	    $valid = array(
-	        '2000' 		=> __( '2 Seconds', 'retro' ),
-	        '4000' 		=> __( '4 Seconds', 'retro' ),
-	        '6000' 		=> __( '6 Seconds', 'retro' ),
-	        '8000' 		=> __( '8 Seconds', 'retro' ),
-	        '10000' 	=> __( '10 Seconds', 'retro' ),
-	        '12000' 	=> __( '12 Seconds', 'retro' ),
-	        '20000' 	=> __( '20 Seconds', 'retro' ),
-	        '30000' 	=> __( '30 Seconds', 'retro' ),
-	        '60000' 	=> __( '1 Minute', 'retro' ),
-	        '999999999'	=> __( 'Hold Frame', 'retro' ),
+	        '2000' 		=> esc_html__( '2 Seconds', '90s-retro' ),
+	        '4000' 		=> esc_html__( '4 Seconds', '90s-retro' ),
+	        '6000' 		=> esc_html__( '6 Seconds', '90s-retro' ),
+	        '8000' 		=> esc_html__( '8 Seconds', '90s-retro' ),
+	        '10000' 	=> esc_html__( '10 Seconds', '90s-retro' ),
+	        '12000' 	=> esc_html__( '12 Seconds', '90s-retro' ),
+	        '20000' 	=> esc_html__( '20 Seconds', '90s-retro' ),
+	        '30000' 	=> esc_html__( '30 Seconds', '90s-retro' ),
+	        '60000' 	=> esc_html__( '1 Minute', '90s-retro' ),
+	        '999999999'	=> esc_html__( 'Hold Frame', '90s-retro' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -77,8 +77,8 @@ function retro_theme_customizer( $wp_customize ) {
 	
 	function retro_sanitize_transition_style( $input ) {
 	    $valid = array(
-	        'fade' 		=> __( 'Fade', 'retro' ),
-	        'slide' 	=> __( 'Slide', 'retro' ),
+	        'fade' 		=> esc_html__( 'Fade', '90s-retro' ),
+	        'slide' 	=> esc_html__( 'Slide', '90s-retro' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -90,9 +90,9 @@ function retro_theme_customizer( $wp_customize ) {
 	
 	function retro_sanitize_columns( $input ) {
 	    $valid = array(
-	        'one' 		=> __( 'One Column', 'retro' ),
-	        'two' 		=> __( 'Two Columns', 'retro' ),
-	        'three' 	=> __( 'Three Columns', 'retro' ),
+	        'one' 		=> esc_html__( 'One Column', '90s-retro' ),
+	        'two' 		=> esc_html__( 'Two Columns', '90s-retro' ),
+	        'three' 	=> esc_html__( 'Three Columns', '90s-retro' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -104,9 +104,9 @@ function retro_theme_customizer( $wp_customize ) {
 	
 	function retro_sanitize_align( $input ) {
 	    $valid = array(
-	        'left' 		=> __( 'Left Align', 'retro' ),
-	        'center' 		=> __( 'Center Align', 'retro' ),
-	        'right' 	=> __( 'Right Align', 'retro' ),
+	        'left' 		=> esc_html__( 'Left Align', '90s-retro' ),
+	        'center' 		=> esc_html__( 'Center Align', '90s-retro' ),
+	        'right' 	=> esc_html__( 'Right Align', '90s-retro' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -118,8 +118,8 @@ function retro_theme_customizer( $wp_customize ) {
 	
 	function retro_sanitize_title_color( $input ) {
 	    $valid = array(
-	        'black' 	=> __( 'Black', 'retro' ),
-	        'white' 	=> __( 'White', 'retro' ),
+	        'black' 	=> esc_html__( 'Black', '90s-retro' ),
+	        'white' 	=> esc_html__( 'White', '90s-retro' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -153,7 +153,7 @@ function retro_theme_customizer( $wp_customize ) {
 	//-------------------------------------------------------------------------------------------------------------------//	
 		
 	$wp_customize->add_section( 'title_tagline' , array(
-		'title'       => __( 'Site Title, Tagline & Logo', 'retro' ),
+		'title'       => esc_html__( 'Site Title, Tagline & Logo', '90s-retro' ),
 		'priority'    => 1,
 	) );
 	
@@ -163,7 +163,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'esc_url_raw',
 		) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'retro_logo', array(
-			'label' 	=> __( 'Logo', 'retro' ),
+			'label' 	=> esc_html__( 'Logo', '90s-retro' ),
 			'section' 	=> 'title_tagline',
 			'settings'	=> 'retro_logo',
 			'priority'	=> 1,
@@ -176,12 +176,12 @@ function retro_theme_customizer( $wp_customize ) {
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'title_align', array(
 		    'type' => 'radio',
-		    'label' => __( 'Title & Logo Alignment', 'retro' ),
+		    'label' => esc_html__( 'Title & Logo Alignment', '90s-retro' ),
 		    'section' => 'title_tagline',
 		    'choices' => array(
-		        'left' 		=> __( 'Left Align', 'retro' ),
-		        'center' 	=> __( 'Center Align', 'retro' ),
-		        'right' 	=> __( 'Right Align', 'retro' ),
+		        'left' 		=> esc_html__( 'Left Align', '90s-retro' ),
+		        'center' 	=> esc_html__( 'Center Align', '90s-retro' ),
+		        'right' 	=> esc_html__( 'Right Align', '90s-retro' ),
 		    ),
 		    'priority' => 60,
 		) ) );
@@ -191,18 +191,18 @@ function retro_theme_customizer( $wp_customize ) {
 	//-------------------------------------------------------------------------------------------------------------------//
 		
 	$wp_customize->add_section( 'retro_audio_section' , array(
-		'title'       => __( 'Background Audio', 'retro' ),
+		'title'       => esc_html__( 'Background Audio', '90s-retro' ),
 		'priority'    => 70,
 	) );
 	
 		// Audio Upload
 		$wp_customize->add_setting( 'retro_upload_audio', array(
-			'default' 	=> get_template_directory_uri() . '/audio/overworld.mp3',
+			'default' 	=> get_template_directory_uri() . '/audio/come_and_find_me.mp3',
 			'sanitize_callback' => 'esc_url_raw',
 		) );
 		$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'retro_upload_audio', array(
-			'label' 	=> __( 'Upload Audio', 'organicthemes' ),
-			'description' => __( 'Preferably an MP3 audio file.', 'organicthemes' ),
+			'label' 	=> esc_html__( 'Upload Audio', 'organicthemes' ),
+			'description' => esc_html__( 'Preferably an MP3 audio file.', 'organicthemes' ),
 			'section' 	=> 'retro_audio_section',
 			'settings'	=> 'retro_upload_audio',
 			'priority'	=> 20,
@@ -214,7 +214,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'retro_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'stop_the_music', array(
-			'label'		=> __( 'Stop The DAMN Music!!!', 'retro' ),
+			'label'		=> esc_html__( 'Stop The DAMN Music!!!', '90s-retro' ),
 			'section'	=> 'retro_audio_section',
 			'settings'	=> 'stop_the_music',
 			'type'		=> 'checkbox',
@@ -226,7 +226,7 @@ function retro_theme_customizer( $wp_customize ) {
 	//-------------------------------------------------------------------------------------------------------------------//
 	
 	$wp_customize->add_section( 'retro_layout_section' , array(
-		'title'       => __( 'Misc Options', 'retro' ),
+		'title'       => esc_html__( 'Misc Options', '90s-retro' ),
 		'priority'    => 80,
 	) );
 		
@@ -236,7 +236,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'retro_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hide_the_gifs', array(
-			'label'		=> __( 'Show Animated Footer Gifs?', 'retro' ),
+			'label'		=> esc_html__( 'Show Animated Footer Gifs?', '90s-retro' ),
 			'section'	=> 'retro_layout_section',
 			'settings'	=> 'hide_the_gifs',
 			'type'		=> 'checkbox',
@@ -249,7 +249,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'retro_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lose_the_counter', array(
-			'label'		=> __( 'Show Fake Visitor Counter?', 'retro' ),
+			'label'		=> esc_html__( 'Show Fake Visitor Counter?', '90s-retro' ),
 			'section'	=> 'retro_layout_section',
 			'settings'	=> 'lose_the_counter',
 			'type'		=> 'checkbox',
@@ -262,7 +262,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'retro_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_author_blog', array(
-			'label'		=> __( 'Show Blog Author Link?', 'retro' ),
+			'label'		=> esc_html__( 'Show Blog Author Link?', '90s-retro' ),
 			'section'	=> 'retro_layout_section',
 			'settings'	=> 'display_author_blog',
 			'type'		=> 'checkbox',
@@ -275,7 +275,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'retro_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_date_blog', array(
-			'label'		=> __( 'Show Blog Date & Comment Link?', 'retro' ),
+			'label'		=> esc_html__( 'Show Blog Date & Comment Link?', '90s-retro' ),
 			'section'	=> 'retro_layout_section',
 			'settings'	=> 'display_date_blog',
 			'type'		=> 'checkbox',
@@ -288,7 +288,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'retro_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_feature_post', array(
-			'label'		=> __( 'Show Post Featured Images?', 'retro' ),
+			'label'		=> esc_html__( 'Show Post Featured Images?', '90s-retro' ),
 			'section'	=> 'retro_layout_section',
 			'settings'	=> 'display_feature_post',
 			'type'		=> 'checkbox',

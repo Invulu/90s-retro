@@ -3,8 +3,8 @@
 * The footer for our theme.
 * This template is used to generate the footer for the theme.
 *
-* @package Retro
-* @since Retro 1.0
+* @package 90s Retro
+* @since 90s Retro 1.0
 *
 */
 ?>
@@ -44,9 +44,9 @@
 	
 				<div class="align-left">
 				
-					<p><?php _e("Copyright", 'retro'); ?> &copy; <?php echo date(__("Y", 'retro')); ?> &middot; <?php _e("All Rights Reserved", 'retro'); ?> &middot; <?php bloginfo('name'); ?></p>
+					<p><?php esc_html_e("Copyright", '90s-retro'); ?> &copy; <?php echo date( esc_html__("Y", '90s-retro') ); ?> &middot; <?php esc_html_e("All Rights Reserved", '90s-retro'); ?> &middot; <?php bloginfo('name'); ?></p>
 					
-					<p><?php _e("Retro", 'retro'); ?> <?php _e("from", 'retro'); ?> <a href="http://organicthemes.com" target="_blank"><?php _e("Organic Themes", 'retro'); ?></a> &middot; <a href="<?php bloginfo('rss2_url'); ?>"><?php _e("RSS Feed", 'retro'); ?></a> &middot; <?php wp_loginout(); ?></p>
+					<p><?php esc_html_e("90s Retro", '90s-retro'); ?> <?php esc_html_e("from", '90s-retro'); ?> <a href="http://organicthemes.com" target="_blank"><?php esc_html_e("Organic Themes", '90s-retro'); ?></a> &middot; <a href="<?php bloginfo('rss2_url'); ?>"><?php esc_html_e("RSS Feed", '90s-retro'); ?></a> &middot; <?php wp_loginout(); ?></p>
 					
 				</div>
 				

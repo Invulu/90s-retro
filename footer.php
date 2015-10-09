@@ -21,24 +21,6 @@
 		<!-- BEGIN .content -->
 		<div class="content">
 			
-			<?php if (get_theme_mod('hide_the_gifs', '1') == '1') { ?>
-			
-			<div class="animated-gifs text-center">
-				
-				<img src="<?php echo get_template_directory_uri(); ?>/images/baby.gif" alt="Dancing Baby" />
-				
-				<img src="<?php echo get_template_directory_uri(); ?>/images/construction.gif" alt="Under Construction" />
-			
-			</div>
-			
-			<?php } ?>
-			
-			<?php if (get_theme_mod('lose_the_counter', '1') == '1') { ?>
-		
-				<?php get_template_part( 'content/fake', 'counter' ); ?>
-			
-			<?php } ?>
-			
 			<!-- BEGIN .footer-information -->
 			<div class="footer-information">
 	

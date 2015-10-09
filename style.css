@@ -1,13 +1,13 @@
 /******************************************************************************************************************* 
 
 	Theme Name: 90s Retro
-	Theme URI: http://www.organicthemes.com
+	Theme URI: http://www.organicthemes.com/retro-theme/
 	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably not!
 	Author: Organic Themes
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.1
+	Version: 1.2.1
 	Text Domain: 90s-retro
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -41,6 +41,7 @@
 	19. Tables
 	20. Forms
 	21. Jetpack
+	22. WordPress Core
 	  
 *******************************************************************************************************************/
 
@@ -755,14 +756,6 @@ div.menu ul li li li:hover ul {
 .archive-column.last {
 	padding-right: 0;
 	}
-.wp-audio-shortcode {
-	margin: 12px 0px;
-	}
-.sticky {
-	position: relative;
-	}
-.bypostauthor {
-	}
 		
 /************************************************
 *	6. Social Media   							*
@@ -1292,10 +1285,6 @@ img.alignleft {
 	padding-top: 24px;
 	overflow: hidden;
 	}
-.animated-gifs img {
-	display: block;
-	margin: 0px auto 24px;
-	}
 .fake-counter {
 	display: block;
 	margin-bottom: 24px;
@@ -1666,4 +1655,44 @@ select {
 	}
 .widget-grofile h4 {
 	margin: 24px 0px 0px 0px !important;
+	}
+	
+/************************************************
+*	22.	WordPress Core	 			     	    *
+************************************************/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+	}
+.wp-audio-shortcode {
+	margin: 12px 0px;
+	}
+.sticky {
+	position: relative;
+	}
+.bypostauthor {
 	}

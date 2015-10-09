@@ -28,8 +28,8 @@ get_header(); ?>
 				<!-- BEGIN .article -->
 				<div class="article">
 			
-					<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'nineties-retro'); ?></h1>
-					<p><?php esc_html_e("The page you are looking for no longer exists.", 'nineties-retro'); ?></p>
+					<h1 class="headline"><?php esc_html_e("Not Found, Error 404", '90s-retro'); ?></h1>
+					<p><?php esc_html_e("The page you are looking for no longer exists.", '90s-retro'); ?></p>
 					
 				<!-- END .article -->
 				</div>
@@ -65,8 +65,8 @@ get_header(); ?>
 					<!-- BEGIN .article -->
 					<div class="article">
 				
-						<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'nineties-retro'); ?></h1>
-						<p><?php esc_html_e("The page you are looking for no longer exists.", 'nineties-retro'); ?></p>
+						<h1 class="headline"><?php esc_html_e("Not Found, Error 404", '90s-retro'); ?></h1>
+						<p><?php esc_html_e("The page you are looking for no longer exists.", '90s-retro'); ?></p>
 						
 					<!-- END .article -->
 					</div>

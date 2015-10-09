@@ -187,11 +187,24 @@ function retro_theme_customizer( $wp_customize ) {
 		) ) );
 		
 	//-------------------------------------------------------------------------------------------------------------------//
+	// Theme Options Panel
+	//-------------------------------------------------------------------------------------------------------------------//
+
+	$wp_customize->add_panel( 'retro_theme_options', array(
+	    'priority' => 1,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => esc_html__( 'Theme Options', '90s-retro' ),
+	    'description' => esc_html__( 'This panel allows you to customize specific areas of the theme.', '90s-retro' ),
+	) );
+		
+	//-------------------------------------------------------------------------------------------------------------------//
 	// Audio Options
 	//-------------------------------------------------------------------------------------------------------------------//
 		
 	$wp_customize->add_section( 'retro_audio_section' , array(
 		'title'       => esc_html__( 'Background Audio', '90s-retro' ),
+		'panel' => 'retro_theme_options',
 		'priority'    => 70,
 	) );
 	
@@ -201,8 +214,8 @@ function retro_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'esc_url_raw',
 		) );
 		$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'retro_upload_audio', array(
-			'label' 	=> esc_html__( 'Upload Audio', 'organicthemes' ),
-			'description' => esc_html__( 'Preferably an MP3 audio file.', 'organicthemes' ),
+			'label' 	=> esc_html__( 'Upload Audio', '90s-retro' ),
+			'description' => esc_html__( 'Preferably an MP3 audio file.', '90s-retro' ),
 			'section' 	=> 'retro_audio_section',
 			'settings'	=> 'retro_upload_audio',
 			'priority'	=> 20,
@@ -227,34 +240,9 @@ function retro_theme_customizer( $wp_customize ) {
 	
 	$wp_customize->add_section( 'retro_layout_section' , array(
 		'title'       => esc_html__( 'Misc Options', '90s-retro' ),
+		'panel' => 'retro_theme_options',
 		'priority'    => 80,
 	) );
-		
-		// Display Footer Gifs
-		$wp_customize->add_setting( 'hide_the_gifs', array(
-			'default'	=> true,
-			'sanitize_callback' => 'retro_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hide_the_gifs', array(
-			'label'		=> esc_html__( 'Show Animated Footer Gifs?', '90s-retro' ),
-			'section'	=> 'retro_layout_section',
-			'settings'	=> 'hide_the_gifs',
-			'type'		=> 'checkbox',
-			'priority' => 20,
-		) ) );
-		
-		// Display Visitor Counter
-		$wp_customize->add_setting( 'lose_the_counter', array(
-			'default'	=> true,
-			'sanitize_callback' => 'retro_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'lose_the_counter', array(
-			'label'		=> esc_html__( 'Show Fake Visitor Counter?', '90s-retro' ),
-			'section'	=> 'retro_layout_section',
-			'settings'	=> 'lose_the_counter',
-			'type'		=> 'checkbox',
-			'priority' => 40,
-		) ) );
 		
 		// Display Blog Author
 		$wp_customize->add_setting( 'display_author_blog', array(

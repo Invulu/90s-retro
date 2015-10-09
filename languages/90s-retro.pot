@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 90s Retro\n"
-"POT-Creation-Date: 2015-08-13 11:59-0500\n"
-"PO-Revision-Date: 2015-08-13 11:59-0500\n"
+"POT-Creation-Date: 2015-10-01 15:31-0500\n"
+"PO-Revision-Date: 2015-10-01 15:31-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -163,31 +163,31 @@ msgstr ""
 msgid "We're sorry, but the post was not found."
 msgstr ""
 
-#: footer.php:47
+#: footer.php:29
 msgid "Copyright"
 msgstr ""
 
-#: footer.php:47
+#: footer.php:29
 msgid "Y"
 msgstr ""
 
-#: footer.php:47
+#: footer.php:29
 msgid "All Rights Reserved"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:31
 msgid "90s Retro"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:31
 msgid "from"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:31
 msgid "Organic Themes"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:31
 msgid "RSS Feed"
 msgstr ""
 
@@ -337,43 +337,43 @@ msgstr ""
 msgid "Title & Logo Alignment"
 msgstr ""
 
-#: includes/customizer.php:194
+#: includes/customizer.php:197
+msgid "Theme Options"
+msgstr ""
+
+#: includes/customizer.php:198
+msgid "This panel allows you to customize specific areas of the theme."
+msgstr ""
+
+#: includes/customizer.php:206
 msgid "Background Audio"
 msgstr ""
 
-#: includes/customizer.php:204
+#: includes/customizer.php:217
 msgid "Upload Audio"
 msgstr ""
 
-#: includes/customizer.php:205
+#: includes/customizer.php:218
 msgid "Preferably an MP3 audio file."
 msgstr ""
 
-#: includes/customizer.php:217
+#: includes/customizer.php:230
 msgid "Stop The DAMN Music!!!"
 msgstr ""
 
-#: includes/customizer.php:229
+#: includes/customizer.php:242
 msgid "Misc Options"
 msgstr ""
 
-#: includes/customizer.php:239
-msgid "Show Animated Footer Gifs?"
-msgstr ""
-
-#: includes/customizer.php:252
-msgid "Show Fake Visitor Counter?"
-msgstr ""
-
-#: includes/customizer.php:265
+#: includes/customizer.php:253
 msgid "Show Blog Author Link?"
 msgstr ""
 
-#: includes/customizer.php:278
+#: includes/customizer.php:266
 msgid "Show Blog Date & Comment Link?"
 msgstr ""
 
-#: includes/customizer.php:291
+#: includes/customizer.php:279
 msgid "Show Post Featured Images?"
 msgstr ""
 

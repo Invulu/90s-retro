@@ -4,32 +4,17 @@
 * Handles toggling the navigation menu for small screens.
 */
 ( function() {
+	var container = document.getElementById( 'navigation' ),
+		button = container.getElementsByClassName( 'menu-toggle' )[0],
+		menu = container.getElementsByTagName( 'ul' )[0];
+		holder = container.getElementsByTagName( 'div' )[0];
 
-	var container, button, menu, holder;
-
-	container = document.getElementById( 'navigation' );
-	if ( ! container )
-		return;
-
-	button = container.getElementsByTagName( 'span' )[0];
-	if ( 'undefined' === typeof button )
-		return;
-
-	menu = container.getElementsByTagName( 'ul' )[0];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	holder = container.getElementsByTagName( 'div' )[0];
-	if ( 'undefined' === typeof button )
-		return;
+	if ( undefined == button || undefined == menu )
+		return false;
 
 	button.onclick = function() {
 		if ( -1 == menu.className.indexOf( 'mobile-menu' ) )
-			menu.className = 'menu';
+		menu.className = 'menu';
 
 		if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
 			holder.className += ' sf-js-enabled';
@@ -48,4 +33,7 @@
 		}
 	};
 
+	// Hide menu toggle button if menu is empty.
+	if ( ! menu.childNodes.length )
+		button.style.display = 'none';
 } )();

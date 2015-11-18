@@ -79,7 +79,7 @@
 <!-- END #header -->
 </div>
 
-<?php if (get_theme_mod('stop_the_music', '') == '') { ?>
+<?php if ( '' != get_theme_mod('retro_start_music', '')) { ?>
 
 <audio src="<?php echo esc_url( get_theme_mod( 'retro_upload_audio', get_template_directory_uri() . '/audio/come_and_find_me.mp3' ) ); ?>" preload="auto" autoplay="autoplay"></audio>
 

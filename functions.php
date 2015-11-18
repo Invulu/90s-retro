@@ -299,3 +299,4 @@ add_action( 'body_class', 'retro_body_class' );
 
 require_once( get_template_directory() . '/includes/jetpack.php' );
 require_once( get_template_directory() . '/includes/customizer.php' );
+require_once( get_template_directory() . '/includes/typefaces.php' );

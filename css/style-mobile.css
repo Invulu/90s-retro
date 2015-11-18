@@ -3,6 +3,7 @@
 ************************************************/
 
 .row { 
+	position: relative;
 	width: 100%; 
 	margin: 0 auto; 
 	}
@@ -197,22 +198,24 @@
 		border: 3px solid #666666;
 		box-shadow: inset 3px 3px 0px #ffffff;
 		}
+	.menu {
+		display: none;
+		}
 	.mobile-menu {
+		display: block;
 		margin: 0px;
 		padding: 0px;
 		}
-	.menu-toggle,
-	.main-small-navigation ul.mobile-menu.toggled-on {
+	.mobile-menu.toggled-on {
 		display: block;
 		}
-	.navigation-main ul.menu,
-	.sf-sub-indicator {
-		display: none;
-		}
-	.menu {
-		display: block;
+	.mobile-menu-full-menu-container,
+	.mobile-menu-main-menu-container {
+		float: left;
+		width: 100%;
 		}
 	.menu-toggle {
+		display: block;
 		color: #666666;
 		font-size: 24px;
 		text-align: left;
@@ -266,6 +269,10 @@
 		color: #000000 !important;
 		text-decoration: none;
 		box-shadow: inset 3px 3px 0px #666666;
+		}
+	.navigation-main ul.menu,
+	.sf-sub-indicator {
+		display: none;
 		}
 	.content {
 		padding: 12px 4%;

@@ -169,23 +169,6 @@ function retro_theme_customizer( $wp_customize ) {
 			'priority'	=> 1,
 		) ) );
 		
-		// Site Title Align
-		$wp_customize->add_setting( 'title_align', array(
-		    'default' => 'center',
-		    'sanitize_callback' => 'retro_sanitize_align',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'title_align', array(
-		    'type' => 'radio',
-		    'label' => esc_html__( 'Title & Logo Alignment', '90s-retro' ),
-		    'section' => 'title_tagline',
-		    'choices' => array(
-		        'left' 		=> esc_html__( 'Left Align', '90s-retro' ),
-		        'center' 	=> esc_html__( 'Center Align', '90s-retro' ),
-		        'right' 	=> esc_html__( 'Right Align', '90s-retro' ),
-		    ),
-		    'priority' => 60,
-		) ) );
-		
 	//-------------------------------------------------------------------------------------------------------------------//
 	// Theme Options Panel
 	//-------------------------------------------------------------------------------------------------------------------//
@@ -208,6 +191,19 @@ function retro_theme_customizer( $wp_customize ) {
 		'priority'    => 70,
 	) );
 	
+		// Stop Music
+		$wp_customize->add_setting( 'retro_start_music', array(
+			'default'	=> '',
+			'sanitize_callback' => 'retro_sanitize_checkbox',
+		) );
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'retro_start_music', array(
+			'label'		=> esc_html__( 'Start The Music', '90s-retro' ),
+			'section'	=> 'retro_audio_section',
+			'settings'	=> 'retro_start_music',
+			'type'		=> 'checkbox',
+			'priority' => 20,
+		) ) );
+	
 		// Audio Upload
 		$wp_customize->add_setting( 'retro_upload_audio', array(
 			'default' 	=> get_template_directory_uri() . '/audio/come_and_find_me.mp3',
@@ -218,20 +214,7 @@ function retro_theme_customizer( $wp_customize ) {
 			'description' => esc_html__( 'Preferably an MP3 audio file.', '90s-retro' ),
 			'section' 	=> 'retro_audio_section',
 			'settings'	=> 'retro_upload_audio',
-			'priority'	=> 20,
-		) ) );
-	
-		// Stop Music
-		$wp_customize->add_setting( 'stop_the_music', array(
-			'default'	=> '',
-			'sanitize_callback' => 'retro_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'stop_the_music', array(
-			'label'		=> esc_html__( 'Stop The DAMN Music!!!', '90s-retro' ),
-			'section'	=> 'retro_audio_section',
-			'settings'	=> 'stop_the_music',
-			'type'		=> 'checkbox',
-			'priority' => 40,
+			'priority'	=> 40,
 		) ) );
 		
 	//-------------------------------------------------------------------------------------------------------------------//

@@ -1,6 +1,6 @@
 <?php if ( get_theme_mod( 'retro_logo', '' ) ) { ?>
 
-	<h1 id="logo" class="<?php if (get_theme_mod('title_align', 'center') == 'center') { ?>text-center<?php } if (get_theme_mod('title_align') == 'right') { ?>text-right<?php } ?>">
+	<h1 id="logo" class="text-center">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<img src="<?php echo esc_url( get_theme_mod( 'retro_logo', '' ) ); ?>" alt="" />
 			<span class="logo-text"><?php echo wp_kses_post( get_bloginfo( 'name' ) ); ?></span>
@@ -9,7 +9,9 @@
 	
 <?php } else { ?>
 
-	<div id="masthead" class="<?php if (get_theme_mod('title_align', 'center') == 'center') { ?>text-center<?php } if (get_theme_mod('title_align') == 'right') { ?>text-right<?php } ?>">
+	<div class="torch-left"><img src="<?php echo get_template_directory_uri(); ?>/images/retro-torch.gif" alt="" width="190px" height="300px" /></div>
+
+	<div id="masthead" class="vertical-center text-center">
 	
 		<h1 class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo wp_kses_post( get_bloginfo( 'name' ) ); ?></a>
@@ -20,5 +22,7 @@
 		</h2>
 		
 	</div>
+	
+	<div class="torch-right"><img src="<?php echo get_template_directory_uri(); ?>/images/retro-torch.gif" alt="" width="190px" height="300px" /></div>
 	
 <?php } ?>

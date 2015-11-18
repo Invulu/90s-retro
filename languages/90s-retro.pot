@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 90s Retro\n"
-"POT-Creation-Date: 2015-10-01 15:31-0500\n"
-"PO-Revision-Date: 2015-10-01 15:31-0500\n"
+"POT-Creation-Date: 2015-11-18 17:44-0500\n"
+"PO-Revision-Date: 2015-11-18 17:44-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -305,15 +305,15 @@ msgstr ""
 msgid "Three Columns"
 msgstr ""
 
-#: includes/customizer.php:107 includes/customizer.php:182
+#: includes/customizer.php:107
 msgid "Left Align"
 msgstr ""
 
-#: includes/customizer.php:108 includes/customizer.php:183
+#: includes/customizer.php:108
 msgid "Center Align"
 msgstr ""
 
-#: includes/customizer.php:109 includes/customizer.php:184
+#: includes/customizer.php:109
 msgid "Right Align"
 msgstr ""
 
@@ -333,48 +333,49 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: includes/customizer.php:179
-msgid "Title & Logo Alignment"
-msgstr ""
-
-#: includes/customizer.php:197
+#: includes/customizer.php:180
 msgid "Theme Options"
 msgstr ""
 
-#: includes/customizer.php:198
+#: includes/customizer.php:181
 msgid "This panel allows you to customize specific areas of the theme."
 msgstr ""
 
-#: includes/customizer.php:206
+#: includes/customizer.php:189
 msgid "Background Audio"
 msgstr ""
 
-#: includes/customizer.php:217
+#: includes/customizer.php:200
+msgid "Start The Music"
+msgstr ""
+
+#: includes/customizer.php:213
 msgid "Upload Audio"
 msgstr ""
 
-#: includes/customizer.php:218
+#: includes/customizer.php:214
 msgid "Preferably an MP3 audio file."
 msgstr ""
 
-#: includes/customizer.php:230
-msgid "Stop The DAMN Music!!!"
-msgstr ""
-
-#: includes/customizer.php:242
+#: includes/customizer.php:225
 msgid "Misc Options"
 msgstr ""
 
-#: includes/customizer.php:253
+#: includes/customizer.php:236
 msgid "Show Blog Author Link?"
 msgstr ""
 
-#: includes/customizer.php:266
+#: includes/customizer.php:249
 msgid "Show Blog Date & Comment Link?"
 msgstr ""
 
-#: includes/customizer.php:279
+#: includes/customizer.php:262
 msgid "Show Post Featured Images?"
+msgstr ""
+
+#: includes/typefaces.php:24
+msgctxt "VT323 font: on or off"
+msgid "on"
 msgstr ""
 
 #: searchform.php:12

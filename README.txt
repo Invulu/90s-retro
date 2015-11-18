@@ -76,3 +76,4 @@ CHANGELOG v1.3:
 - Added typefaces file for Google Fonts
 - Updated mobile navigation script
 - Mobile menu fixes
+- Regenerated language files

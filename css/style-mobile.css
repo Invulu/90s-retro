@@ -189,6 +189,20 @@
 		background-position: center center !important;
 		margin: 0px;
 		}
+	#masthead {
+		position: relative;
+		top: auto;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		}
+	#masthead .site-title {
+		font-size: 3em;
+		}
+	#masthead .site-description {
+		font-size: 1.2em;
+		line-height: 1.2;
+		}
 	#navigation {
 		background: #cccccc;
 		position: relative;

@@ -18,7 +18,7 @@
 		</h1>
 		
 		<h2 class="site-description">
-			<?php echo wp_kses_post( get_bloginfo( 'description' ) ); ?>
+			<?php echo html_entity_decode( get_bloginfo( 'description' ) ); ?>
 		</h2>
 		
 	</div>

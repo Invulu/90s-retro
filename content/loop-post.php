@@ -37,6 +37,8 @@
 			'echo' => 1 )
 		); ?>
 		
+		<?php edit_post_link( esc_html__("(Edit)", '90s-retro'), '', ''); ?>
+		
 		<!-- BEGIN .post-meta -->
 		<div class="post-meta">
 		

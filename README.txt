@@ -1,4 +1,4 @@
-90s Retro v1.3.2
+90s Retro v1.3.3
 http://organicthemes.com
 
 A WordPress theme designed in the style of an old Geocities site, because we thought it would be funny.
@@ -8,7 +8,7 @@ Image Credits
 - logo.gif: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - retro-torch.gif: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-	- Image in screenshot: Photo by Olaf Hüttemann. Downloaded from Unsplash, https://unsplash.com/license. Licensed under Creative Commons Zero.
+	- Image in screenshot: Photo by Tracy Thomas. Downloaded from Unsplash, https://unsplash.com/license. Licensed under Creative Commons Zero.
 - background.png: Downloaded from Subtle Patters, http://subtlepatterns.com/small-steps/. Licensed under CC BY-SA 3.0.
 
 Audio Credits
@@ -85,3 +85,10 @@ CHANGELOG v1.3.1:
 CHANGELOG v1.3.2:
 - Fixed site title display on mobile
 - Style tweaks
+
+CHANGELOG v1.3.3:
+- Updated screenshot
+- Updated mobile menu
+- Updated site description to allow HTML
+- Added edit post link to post
+- Added new social icons to stylesheet

@@ -2,12 +2,12 @@
 
 	Theme Name: 90s Retro
 	Theme URI: http://www.organicthemes.com/retro-theme/
-	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably not! 90s Retro is designed to look like an old website with pixel fonts, neon colors, background music and animated GIFs — mostly because we thought it would be funny. It's a great theme for video game fans, kids and nostalgic adults. The theme was created by David Morgan of Organic Themes.
+	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably not! 90s Retro is designed to look like an old website with pixel fonts, neon colors, background music and animated GIFs — mostly because we thought it would be funny. It's a great theme for video game reviews, toy collectors, kids and nostalgic adults. The theme was created by David Morgan of Organic Themes.
 	Author: Organic Themes
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.3.2
+	Version: 1.3.3
 	Text Domain: 90s-retro
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -823,6 +823,11 @@ div.menu ul li li li:hover ul {
 .social-icons li a[href*="vine.co"]::before				{ content: '\f1ca'; }
 .social-icons li a[href*="instagram.com"]::before		{ content: '\f16d'; }
 .social-icons li a[href*="stackexchange.com"]::before	{ content: '\f18d'; }
+.social-icons li a[href*="spotify.com"]::before			{ content: '\f1bc'; }
+.social-icons li a[href*="amazon.com"]::before			{ content: '\f270'; }
+.social-icons li a[href*="flickr.com"]::before			{ content: '\f16e'; }
+.social-icons li a[href*="vimeo.com"]::before			{ content: '\f27d'; }
+.social-icons li a[href*="yelp.com"]::before			{ content: '\f1e9'; }
 .social-icons li a[href*="mailto:"]::before				{ content: '\f0e0'; }
 .social-icons li a[href$="/feed/"]::before				{ content: '\f09e'; }
 	

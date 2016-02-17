@@ -2,12 +2,12 @@
 
 	Theme Name: 90s Retro
 	Theme URI: http://www.organicthemes.com/retro-theme/
-	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably not! 90s Retro is designed to look like an old website with pixel fonts, neon colors, background music and animated GIFs — mostly because we thought it would be funny. It's a great theme for video game reviews, toy collectors, kids and nostalgic adults. The theme was created by David Morgan of Organic Themes.
+	Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably not! 90s Retro is designed to look like an old website with pixel fonts, neon colors, background music and animated GIFs — mostly because we thought it would be funny. It's a great theme for video game reviews, toy collectors, kids and nostalgic adults.
 	Author: Organic Themes
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.3.3
+	Version: 1.3.5
 	Text Domain: 90s-retro
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -610,7 +610,8 @@ div.menu ul li li li:hover ul {
 .sf-arrows .sf-with-ul {
 	padding-right: 32px;
 	}
-/* styling for both css and generated arrows */
+
+/* Down-Facing Arrows */
 .sf-arrows .sf-with-ul:after {
 	content: '';
 	position: absolute;
@@ -619,28 +620,36 @@ div.menu ul li li li:hover ul {
 	margin-top: -1px;
 	height: 0;
 	width: 0;
-	/* order of following 3 rules important for fallbacks to work */
 	border: 3px solid transparent;
-	border-top-color: #DDDDDD; /* edit this to suit design (no rgba in IE8) */
-	border-top-color: rgba(0, 0, 0, .24);
 	}
-.sf-arrows > li > .sf-with-ul:focus:after,
-.sf-arrows > li:hover > .sf-with-ul:after,
-.sf-arrows > .sfHover > .sf-with-ul:after {
-	border-top-color: rgba(0, 0, 0, .4); /* IE8 fallback colour */
+.sf-arrows .sf-with-ul:after {
+	border-top-color: #999999;
+	border-top-color: rgba(0, 0, 0, .4);
 	}
-/* styling for right-facing arrows */
-.sf-arrows ul .sf-with-ul:after {
+.sf-arrows li > .sf-with-ul:focus:after,
+.sf-arrows li:hover > .sf-with-ul:after,
+.sf-arrows li.sfHover > .sf-with-ul:after {
+	border-top-color: rgba(0, 0, 0, .8);
+	}
+	
+/* Right-Facing Arrows */
+.sf-arrows li li .sf-with-ul:after {
+	right: 12px;
+	}
+.sf-arrows li li .sf-with-ul:after {
 	margin-top: -3px;
 	margin-right: -3px;
-	border-color: transparent;
-	border-left-color: #DDDDDD; /* edit this to suit design (no rgba in IE8) */
-	border-left-color: rgba(0, 0, 0, .24);
+	border-top-color: transparent;
 	}
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
+.sf-arrows li li .sf-with-ul:after {
+	border-left-color: #999999;
 	border-left-color: rgba(0, 0, 0, .4);
+	}
+.sf-arrows li li > .sf-with-ul:focus:after,
+.sf-arrows li li:hover > .sf-with-ul:after,
+.sf-arrows li li.sfHover > .sf-with-ul:after {
+	border-top-color: transparent;
+	border-left-color: rgba(0, 0, 0, .8);
 	}
 
 /************************************************
@@ -835,7 +844,7 @@ div.menu ul li li li:hover ul {
 *	7.	Pagination 	  		      		     	* 
 ************************************************/
 
-.pagination {
+.navigation.pagination {
 	float: left;
 	display: block;
 	width: 100%;

@@ -1,5 +1,5 @@
 /*
- * jQuery Superfish Menu Plugin - v1.7.4
+ * jQuery Superfish Menu Plugin
  * Copyright (c) 2013 Joel Birch
  *
  * Dual licensed under the MIT and GPL licenses:
@@ -7,7 +7,7 @@
  *	http://www.gnu.org/licenses/gpl.html
  */
 
-;(function ($) {
+(function ($, w) {
 	"use strict";
 
 	var methods = (function () {
@@ -19,18 +19,19 @@
 				menuArrowClass: 'sf-arrows'
 			},
 			ios = (function () {
-				var ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+				var ios = /^(?![\w\W]*Windows Phone)[\w\W]*(iPhone|iPad|iPod)/i.test(navigator.userAgent);
 				if (ios) {
-					// iOS clicks only bubble as far as body children
-					$(window).load(function () {
-						$('body').children().on('click', $.noop);
-					});
+					// tap anywhere on iOS to unfocus a submenu
+					$('html').css('cursor', 'pointer').on('click', $.noop);
 				}
 				return ios;
 			})(),
 			wp7 = (function () {
 				var style = document.documentElement.style;
 				return ('behavior' in style && 'fill' in style && /iemobile/i.test(navigator.userAgent));
+			})(),
+			unprefixedPointerEvents = (function () {
+				return (!!w.PointerEvent);
 			})(),
 			toggleMenuClasses = function ($menu, o) {
 				var classes = c.menuClass;
@@ -50,9 +51,14 @@
 				$li.children('a').toggleClass(c.anchorClass);
 			},
 			toggleTouchAction = function ($menu) {
-				var touchAction = $menu.css('ms-touch-action');
+				var msTouchAction = $menu.css('ms-touch-action');
+				var touchAction = $menu.css('touch-action');
+				touchAction = touchAction || msTouchAction;
 				touchAction = (touchAction === 'pan-y') ? 'auto' : 'pan-y';
-				$menu.css('ms-touch-action', touchAction);
+				$menu.css({
+					'ms-touch-action': touchAction,
+					'touch-action': touchAction
+				});
 			},
 			applyHandlers = function ($menu, o) {
 				var targets = 'li:has(' + o.popUpSelector + ')';
@@ -65,6 +71,9 @@
 						.on('mouseleave.superfish', targets, out);
 				}
 				var touchevent = 'MSPointerDown.superfish';
+				if (unprefixedPointerEvents) {
+					touchevent = 'pointerdown.superfish';
+				}
 				if (!ios) {
 					touchevent += ' touchend.superfish';
 				}
@@ -78,11 +87,16 @@
 			},
 			touchHandler = function (e) {
 				var $this = $(this),
+					o = getOptions($this),
 					$ul = $this.siblings(e.data.popUpSelector);
+
+				if (o.onHandleTouch.call($ul) === false) {
+					return this;
+				}
 
 				if ($ul.length > 0 && $ul.is(':hidden')) {
 					$this.one('click.superfish', false);
-					if (e.type === 'MSPointerDown') {
+					if (e.type === 'MSPointerDown' || e.type === 'pointerdown') {
 						$this.trigger('focus');
 					} else {
 						$.proxy(over, $this.parent('li'))();
@@ -142,7 +156,11 @@
 						speed = 0;
 					}
 					o.retainPath = false;
-					o.onBeforeHide.call($ul);
+
+					if (o.onBeforeHide.call($ul) === false) {
+						return this;
+					}
+
 					$ul.stop(true, true).animate(o.animationOut, speed, function () {
 						var $this = $(this);
 						o.onHide.call($this);
@@ -158,7 +176,10 @@
 				var $this = this.addClass(o.hoverClass),
 					$ul = $this.children(o.popUpSelector);
 
-				o.onBeforeShow.call($ul);
+				if (o.onBeforeShow.call($ul) === false) {
+					return this;
+				}
+
 				$ul.stop(true, true).animate(o.animation, o.speed, function () {
 					o.onShow.call($ul);
 				});
@@ -245,13 +266,8 @@
 		onBeforeHide: $.noop,
 		onHide: $.noop,
 		onIdle: $.noop,
-		onDestroy: $.noop
+		onDestroy: $.noop,
+		onHandleTouch: $.noop
 	};
 
-	// soon to be deprecated
-	$.fn.extend({
-		hideSuperfishUl: methods.hide,
-		showSuperfishUl: methods.show
-	});
-
-})(jQuery);
+})(jQuery, window);

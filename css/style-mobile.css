@@ -228,16 +228,19 @@
 		float: left;
 		width: 100%;
 		}
-	.menu-toggle {
+	button.menu-toggle {
 		display: block;
+		background: none;
 		color: #666666;
 		font-size: 24px;
 		text-align: left;
 		line-height: 1.2;
+		width: 100%;
 		margin: 0;
 		padding: 12px 18px;
+		border: none;
 		}
-	.menu-toggle:hover {
+	button.menu-toggle:hover {
 		color: #000000;
 		}
 	.mobile-menu ul.sub-menu,
@@ -319,7 +322,7 @@
 	.postarea.middle #comments {
 		padding: 24px 6%;
 		}
-	.pagination {
+	.navigation.pagination {
 		margin-bottom: 12px;
 		}
 	.archive-column {

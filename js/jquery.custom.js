@@ -15,6 +15,27 @@
 			dropShadows: false
 		});
 	}
+	
+	/* Disable Superfish on mobile ---------------------*/
+	function superfishMobile() {
+		var sf, body;
+		var breakpoint = 767;
+	    body = $('body');
+	    sf = $('ul.menu');
+	    if ( body.width() >= breakpoint ) {
+	      // Enable superfish when the page first loads if we're on desktop
+	      sf.superfish();
+	    }
+	    $(window).resize(function() {
+	        if ( body.width() >= breakpoint && !sf.hasClass('sf-js-enabled') ) {
+	            // You only want SuperFish to be re-enabled once (sf.hasClass)
+	            sf.superfish('init');
+	        } else if ( body.width() < breakpoint ) {
+	            // Smaller screen, disable SuperFish
+	            sf.superfish('destroy');
+	        }
+	    });
+	}
 		
 	function modifyPosts() {
 		
@@ -38,6 +59,7 @@
 	$( document )
 	.ready( removeNoJsClass )
 	.ready( superfishSetup )
+	.ready( superfishMobile )
 	.ready( modifyPosts )
 	.on( 'post-load', modifyPosts );
 	

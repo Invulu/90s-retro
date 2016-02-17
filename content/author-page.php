@@ -35,9 +35,10 @@
 				<?php endwhile; ?>
 			</ul>
 			
-			<div class="pagination">
-				<?php echo retro_get_pagination_links(); ?>
-			</div><!-- END .pagination -->
+			<?php the_posts_pagination( array(
+			    'prev_text' => esc_attr__( '&laquo;', '90s-retro' ),
+			    'next_text' => esc_attr__( '&raquo;', '90s-retro' ),
+			) ); ?>
 		
 			<?php else: ?>
 				<p><?php esc_html_e("No posts by this author.", '90s-retro'); ?></p>

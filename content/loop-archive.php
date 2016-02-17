@@ -47,11 +47,10 @@
 
 <?php endwhile; ?>
 
-<!-- BEGIN .pagination -->
-<div class="pagination">
-	<?php echo retro_get_pagination_links(); ?>
-<!-- END .pagination -->
-</div>
+	<?php the_posts_pagination( array(
+	    'prev_text' => esc_attr__( '&laquo;', '90s-retro' ),
+	    'next_text' => esc_attr__( '&raquo;', '90s-retro' ),
+	) ); ?>
 
 <?php else: ?>
 

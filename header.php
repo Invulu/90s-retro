@@ -58,7 +58,7 @@
 		<!-- BEGIN #navigation -->
 		<nav id="navigation" class="navigation-main clearfix" role="navigation">
 		
-			<span class="menu-toggle"><i class="fa fa-bars"></i></span>
+			<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 		
 			<?php wp_nav_menu( array(
 				'theme_location' 	=> 'main-menu',

@@ -53,6 +53,17 @@ endif; // retro_setup
 add_action( 'after_setup_theme', 'retro_setup' );
 
 /*-----------------------------------------------------------------------------------------------------//	
+	Admin Notice		       	     	 
+-------------------------------------------------------------------------------------------------------*/
+
+function retro_admin_notice(){
+    echo '<div class="updated"><p>'; 
+    printf( __('Enjoying this rad theme!? <a href="%1$s" target="_blank">Check out more</a> tubular WordPress themes from the righteous folks at Organic Themes.', '90s-retro'), 'http://organicthemes.com/themes/');
+    echo "</p></div>";
+}
+add_action('admin_notices', 'retro_admin_notice');
+
+/*-----------------------------------------------------------------------------------------------------//	
 	Category ID to Name		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
@@ -221,23 +232,6 @@ function retro_excerpt_more( $more ) {
 	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. esc_html__('Read More', '90s-retro') .'</a>';
 }
 add_filter('excerpt_more', 'retro_excerpt_more');
-
-/*-----------------------------------------------------------------------------------------------------//
-/*	Pagination Function
-/*-----------------------------------------------------------------------------------------------------*/
-
-function retro_get_pagination_links() {
-	global $wp_query;
-	$big = 999999999;
-	echo paginate_links( array(
-		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-		'format' => '?paged=%#%',
-		'current' => max( 1, get_query_var('paged') ),
-		'prev_text' => esc_html__('&laquo;', '90s-retro'),
-		'next_text' => esc_html__('&raquo;', '90s-retro'),
-		'total' => $wp_query->max_num_pages
-	) );
-}
 
 /*-----------------------------------------------------------------------------------------------------//
 /*	Custom Page Links

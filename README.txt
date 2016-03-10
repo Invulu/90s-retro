@@ -28,8 +28,8 @@ Script Credits
 - html5shiv.js: MIT/GPL2 Licensed.
 - superfish.js: Created by Joel Birch. Dual licensed under the MIT and GPL licenses.
 
- 
-INSTALL: 
+
+INSTALL:
 1. Upload the theme by navigating to Appearance > Themes > Install Themes within the WordPress admin. Select the theme zip file to upload.
 2. Activate the theme after uploading.
 3. Configure and save the theme options within Appearance > Customize.

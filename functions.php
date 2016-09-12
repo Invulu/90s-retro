@@ -67,12 +67,14 @@ function retro_admin_notice() {
 }
 add_action( 'admin_notices', 'retro_admin_notice' );
 
-function retro_admin_footer_notice() {
-	echo '<div class="updated"><p>';
-	printf( __( 'Want to change or remove those pesky footer credits? Get the <a href="%1$s" target="_blank">Footer Change Plugin</a>!', '90s-retro' ), 'http://organicthemes.com/themes/' );
-	echo '</p></div>';
+if ( ! class_exists( 'Organic_Footer_Modifier' ) ) {
+	function retro_admin_footer_notice() {
+		echo '<div class="updated"><p>';
+		printf( __( 'Want to remove or change those pesky footer credits? Get the <a href="%1$s" target="_blank">Footer Change Plugin</a> from Organic Themes!', '90s-retro' ), 'http://organicthemes.com/themes/' );
+		echo '</p></div>';
+	}
+	add_action( 'admin_notices', 'retro_admin_footer_notice' );
 }
-add_action( 'admin_notices', 'retro_admin_footer_notice' );
 
 /*
 -------------------------------------------------------------------------------------------------------

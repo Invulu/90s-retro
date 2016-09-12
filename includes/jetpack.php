@@ -1,15 +1,15 @@
 <?php
 /**
-* Jetpack Compatibility File
-* See: http://jetpack.me/
-*
-* @package 90s Retro
-* @since 90s Retro 1.0
-*/
+ * Jetpack Compatibility File
+ * See: http://jetpack.me/
+ *
+ * @package 90s Retro
+ * @since 90s Retro 1.0
+ */
 
 /**
-* Add support for Jetpack's Featured Content and Infinite Scroll
-*/
+ * Add support for Jetpack's Featured Content and Infinite Scroll
+ */
 function retro_jetpack_setup() {
 
 	// See: http://jetpack.me/support/infinite-scroll/
@@ -24,8 +24,8 @@ function retro_jetpack_setup() {
 add_action( 'after_setup_theme', 'retro_jetpack_setup' );
 
 /**
-* Infinite Scroll: function for rendering posts
-*/
+ * Infinite Scroll: function for rendering posts
+ */
 function retro_render_IS() {
 	get_template_part( 'content/loop', 'blog' );
 }

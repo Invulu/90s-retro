@@ -62,7 +62,7 @@ add_action( 'after_setup_theme', 'retro_setup' );
 
 function retro_admin_notice() {
 	echo '<div class="updated"><p>';
-	printf( __( 'Enjoying this rad theme!? <a href="%1$s" target="_blank">Check out more</a> tubular WordPress themes from the righteous folks at Organic Themes.', '90s-retro' ), 'http://organicthemes.com/themes/' );
+	printf( __( 'Enjoying this rad theme!? Check out <a href="%1$s" target="_blank">more tubular WordPress themes</a> from the righteous folks at Organic Themes.', '90s-retro' ), 'http://organicthemes.com/themes/' );
 	echo '</p></div>';
 }
 add_action( 'admin_notices', 'retro_admin_notice' );

@@ -107,3 +107,4 @@ CHANGELOG v1.4:
 - Cleaned up PHP
 - Updated screenshot.png
 - Theme Check fixes
+- Footer change plugin notice

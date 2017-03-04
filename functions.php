@@ -56,28 +56,6 @@ add_action( 'after_setup_theme', 'retro_setup' );
 
 /*
 -------------------------------------------------------------------------------------------------------
-	Admin Notice
--------------------------------------------------------------------------------------------------------
-*/
-
-function retro_admin_notice() {
-	echo '<div class="updated"><p>';
-	printf( __( 'Enjoying this rad theme!? Check out <a href="%1$s" target="_blank">more tubular WordPress themes</a> from the righteous folks at Organic Themes.', '90s-retro' ), 'http://organicthemes.com/themes/' );
-	echo '</p></div>';
-}
-add_action( 'admin_notices', 'retro_admin_notice' );
-
-if ( ! class_exists( 'Organic_Footer_Modifier' ) ) {
-	function retro_admin_footer_notice() {
-		echo '<div class="updated"><p>';
-		printf( __( 'Want to remove or change those pesky footer credits? Get the <a href="%1$s" target="_blank">Footer Change Plugin</a> from Organic Themes! Use discount code <b>FOOTERSAVE10</b> to save $10!', '90s-retro' ), 'http://organicthemes.com/footer-change-plugin/' );
-		echo '</p></div>';
-	}
-	add_action( 'admin_notices', 'retro_admin_footer_notice' );
-}
-
-/*
--------------------------------------------------------------------------------------------------------
 	Category ID to Name
 -------------------------------------------------------------------------------------------------------
 */

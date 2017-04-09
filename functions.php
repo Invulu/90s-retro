@@ -56,6 +56,30 @@ add_action( 'after_setup_theme', 'retro_setup' );
 
 /*
 -------------------------------------------------------------------------------------------------------
+	Admin Notice
+-------------------------------------------------------------------------------------------------------
+*/
+
+function retro_theme_notice() {
+	global $current_user;
+	$user_id = $current_user->ID;
+	if ( ! get_user_meta( $user_id, 'retro_theme_notice_ignore') ) {
+		echo '<div class="notice notice-warning" style="position: relative;"><p>'. __( 'Enjoying the blast from the past 90s Retro Theme? Consider <a href="https://organicthemes.com/themes/" target="_blank">these themes</a> in the future!', '90s-retro' ) .' <a class="notice-dismiss" href="?retro-ignore-notice" style="text-decoration: none;"></a></p></div>';
+	}
+}
+add_action( 'admin_notices', 'retro_theme_notice' );
+
+function retro_theme_notice_ignore() {
+	global $current_user;
+	$user_id = $current_user->ID;
+	if ( isset( $_GET['retro-ignore-notice'] ) ) {
+		add_user_meta( $user_id, 'retro_theme_notice_ignore', 'true', true );
+	}
+}
+add_action( 'admin_init', 'retro_theme_notice_ignore' );
+
+/*
+-------------------------------------------------------------------------------------------------------
 	Category ID to Name
 -------------------------------------------------------------------------------------------------------
 */
@@ -82,7 +106,6 @@ if ( ! function_exists( 'retro_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'retro-style' ), '1.0' );
 
 		// Enqueue Scripts.
-		wp_enqueue_script( 'retro-html5shiv', get_template_directory_uri() . '/js/html5shiv.js' );
 		wp_enqueue_script( 'retro-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '20130729' );
 		wp_enqueue_script( 'retro-hover', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ), '20130729' );
 		wp_enqueue_script( 'retro-superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery', 'retro-hover' ), '20130729' );

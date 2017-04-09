@@ -120,4 +120,6 @@ CHANGELOG v1.4.3:
 
 CHANGELOG v1.4.4:
 - Removed archives page template
+- Removed HTML5 shiv scripts
+- Added dismissible admin notice
 - General cleanup

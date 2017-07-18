@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.4.4
+	Version: 1.4.5.1
 	Text Domain: 90s-retro
 	Domain Path: /languages/
 	Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options
@@ -42,6 +42,7 @@
 	20. Forms
 	21. Jetpack
 	22. WordPress Core
+	23. Organic Widgets
 
 *******************************************************************************************************************/
 
@@ -691,7 +692,7 @@ div.menu ul li li li:hover ul {
 .archive-holder {
 	background: #000000;
 	position: relative;
-	margin-bottom: 48px;
+	margin-bottom: 24px;
 	border: 6px double #33ff00;
 }
 .postarea {
@@ -747,8 +748,8 @@ div.menu ul li li li:hover ul {
 	margin-left: 8px;
 }
 .post-edit-link {
-	display: inline-block;
-	margin: 12px 0px;
+	display: block;
+	padding-top: 18px;
 }
 .author-column {
 	float: right;
@@ -1710,4 +1711,18 @@ select {
 	position: relative;
 }
 .bypostauthor {
+}
+
+/************************************************
+*	23.	Organic Widgets
+************************************************/
+
+.organic-ocw-container {
+	background: #000000;
+	position: relative;
+	margin: 24px 4%;
+	border: 6px double #33ff00;
+}
+.organic-widgets-card.organic-widgets-no-content {
+	background: none;
 }

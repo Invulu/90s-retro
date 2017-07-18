@@ -1,5 +1,7 @@
 ( function( $ ) {
 
+	'use strict';
+
 	function removeNoJsClass() {
 		$( 'html:first' ).removeClass( 'no-js' );
 	}

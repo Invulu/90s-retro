@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.4.5.1
+	Version: 1.4.6
 	Text Domain: 90s-retro
 	Domain Path: /languages/
 	Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options
@@ -1725,4 +1725,41 @@ select {
 }
 .organic-widgets-card.organic-widgets-no-content {
 	background: none;
+}
+.organic-widgets-card,
+.organic-widgets-content-slideshow-slide-content {
+	background-color: #000000;
+	border: 2px solid #33ff00;
+	border-radius: 0px;
+}
+.organic-widgets-content-slideshow-slide-content {
+	margin-left: 24px;
+	margin-right: 24px;
+}
+.organic-widgets-testimonial-slide-content .organic-widgets-card::after {
+	border-top-color: #33ff00;
+}
+.organic-widgets-testimonial-avatar {
+	margin-top: -80px;
+	border-color: #000000;
+}
+.organic-widgets-flexslider .flex-control-nav li a {
+	border-color: rgba(255, 255, 255, 0.4);
+}
+.organic-widgets-feature-list-item-icon i {
+	color: #ffffff;
+}
+.organic-widgets-pricing-table table th,
+.organic-widgets-pricing-table table td.organic-widgets-pricing-table-purchase-wrapper {
+	background-color: #000000;
+}
+.organic-widgets-pricing-table tr:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.06);
+}
+.organic-widgets-post-meta p.organic-widgets-post-date,
+.organic-widgets-post-meta p.organic-widgets-post-author {
+	color: rgba(255, 255, 255, 0.4);
+}
+.organic-widgets-post-meta {
+	border-left-color: rgba(255, 255, 255, 0.4);
 }

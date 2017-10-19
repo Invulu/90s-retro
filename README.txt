@@ -1,4 +1,4 @@
-90s Retro v1.4.6
+90s Retro v1.4.7
 http://organicthemes.com
 
 A WordPress theme designed in the style of an old Geocities site, because we thought it would be funny.
@@ -137,3 +137,6 @@ CHANGELOG v1.4.6:
 - Updated plugin activation scripts
 - Require Organic Customizer Widgets plugin
 - Recommend Customize Posts plugin
+
+CHANGELOG v1.4.7:
+- Updates to admin notice

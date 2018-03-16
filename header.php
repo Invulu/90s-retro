@@ -41,7 +41,7 @@
 
 		<?php $header_image = get_header_image(); if ( ! empty( $header_image ) ) { ?>
 
-			<div id="custom-header" >
+			<div id="custom-header">
 
 				<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php echo esc_attr( get_bloginfo() ); ?>" />
 

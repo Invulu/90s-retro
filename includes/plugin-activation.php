@@ -47,13 +47,6 @@ function retro_theme_register_required_plugins() {
 			'name'               => 'Organic Customizer Widgets', // The plugin name.
 			'slug'               => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-		),
-		array(
-			'name'      => 'Customize Posts',
-			'slug'      => 'customize-posts',
-			'required'  => false,
 		),
 
 	);

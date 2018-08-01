@@ -66,7 +66,7 @@ add_action( 'after_setup_theme', 'retro_setup' );
 function retro_support_link() {
 	global $submenu;
 	$support_link = esc_url( 'https://organicthemes.com/support/' );
-	$submenu['themes.php'][6] = array( __( 'Theme Support', '90s-retro' ), 'manage_options', $support_link );
+	$submenu['themes.php'][] = array( __( 'Theme Support', '90s-retro' ), 'manage_options', $support_link );
 }
 add_action( 'admin_menu', 'retro_support_link' );
 

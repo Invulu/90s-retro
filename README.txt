@@ -1,4 +1,4 @@
-90s Retro v1.4.9
+90s Retro v1.4.9.1
 http://organicthemes.com
 
 A WordPress theme designed in the style of an old Geocities site, because we thought it would be funny.
@@ -148,3 +148,6 @@ CHANGELOG v1.4.8:
 CHANGELOG v1.4.9:
 - Updated OCW plugin name to Organic Builder Widgets
 - Added theme support submenu link
+
+CHANGELOG v1.4.9.1
+- Fixed issue of custom admin submenu link overwriting other links

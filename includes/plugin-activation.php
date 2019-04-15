@@ -37,19 +37,60 @@ add_action( 'tgmpa_register', 'retro_theme_register_required_plugins' );
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
 function retro_theme_register_required_plugins() {
-	/*
-	 * Array of plugin arrays. Required keys are name and slug.
-	 * If the source is NOT from the .org repo, then source is also required.
-	 */
-	$plugins = array(
 
-		array(
-			'name'               => 'Organic Builder Widgets', // The plugin name.
-			'slug'               => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-		),
+	if ( class_exists( 'Organic_Widgets_Pro' ) ) {
+		/*
+		 * Array of plugin arrays. Required keys are name and slug.
+		 * If the source is NOT from the .org repo, then source is also required.
+		 */
+		$plugins = array(
 
-	);
+			array(
+				'name'     => 'Organic Profile Block', // The plugin name.
+				'slug'     => 'organic-profile-block', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'Widget Area Block', // The plugin name.
+				'slug'     => 'organic-widget-area-block', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'Contact Form by WPForms', // The plugin name.
+				'slug'     => 'wpforms-lite', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+
+		);
+
+	} else {
+
+		$plugins = array(
+
+			array(
+				'name'     => 'Organic Builder Widgets', // The plugin name.
+				'slug'     => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'Organic Profile Block', // The plugin name.
+				'slug'     => 'organic-profile-block', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'Widget Area Block', // The plugin name.
+				'slug'     => 'organic-widget-area-block', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+			array(
+				'name'     => 'Contact Form by WPForms', // The plugin name.
+				'slug'     => 'wpforms-lite', // The plugin slug (typically the folder name).
+				'required' => false, // If false, the plugin is only 'recommended' instead of required.
+			),
+
+		);
+
+	}
 
 	/*
 	 * Array of configuration settings. Amend each line as needed.
